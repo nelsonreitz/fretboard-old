@@ -1,0 +1,58 @@
+/* General */
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    text-align: center;
+    padding: 200px;
+}
+
+/* Fretboard */
+
+#fretboard td {
+    border-top: 2px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 80px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+}
+
+#fretboard tr td:first-of-type {
+    border-left: 5px solid black;
+}
+
+#fretboard tr:first-of-type td {
+    border-top: none;
+    height: 15px;
+}
+
+#fretboard tr:last-of-type td {
+    border-bottom: none;
+    height: 15px;
+}
+
+.note {
+    position: absolute;
+    top: -8px;
+    left: 30px;
+    font-weight: 700;
+}
+
+.marker {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
+}

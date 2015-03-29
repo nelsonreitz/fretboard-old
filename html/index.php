@@ -1,5 +1,5 @@
 <?php
 
-    echo "Hello world";
+    require('../views/index.php');
 
 ?>
