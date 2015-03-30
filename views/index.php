@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/style.css">
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 
   </head>
   <body>
