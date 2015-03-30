@@ -16,7 +16,11 @@ body {
 
 /* Fretboard */
 
-#fretboard td {
+#fretboard thead {
+    font-size: 12px;
+}
+
+#fretboard tbody td {
     border-top: 2px solid black;
     border-right: 1px solid black;
     border-left: 1px solid black;
@@ -27,18 +31,18 @@ body {
     text-align: center;
 }
 
-#fretboard tr td:first-of-type {
+#fretboard tbody tr td:first-of-type {
     border-right: 5px solid black;
     border-left: none;
     width: 30px;
 }
 
-#fretboard tr:first-of-type td {
+#fretboard tbody tr:first-of-type td {
     border-top: none;
     height: 15px;
 }
 
-#fretboard tr:last-of-type td {
+#fretboard tbody tr:last-of-type td {
     border-bottom: none;
     height: 15px;
 }
