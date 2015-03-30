@@ -109,4 +109,25 @@
         return $notes;
     }
 
+    /**
+     * Queries open string notes.
+     */
+    function query_open_strings() {
+
+        $string_notes = [];
+
+        $query = query('SELECT * FROM tunings WHERE name = ?', "E Standard");
+
+        // foreach string
+        foreach ($query[0] as $key => $value)
+        {
+            if ($key !== "name")
+            {
+                $string_notes[$key] = $value;
+            }
+        }
+
+        return $string_notes;
+    }
+
 ?>
