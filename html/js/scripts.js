@@ -11,54 +11,11 @@ var doubleInlays = {
   "frets": [12, 24]
 };
 
-var notes = [
-  {
-    "string": 6,
-    "notes": {
-      "1": "F",
-      "3": "G",
-      "5": "A",
-      "7": "B",
-      "8": "C"
-    }
-  },{
-    "string": 5,
-    "notes": {
-      "2": "B",
-      "3": "C",
-      "5": "D"
-    }
-  },{
-    "string": 4,
-    "notes": {
-      "2": "E",
-      "3": "F",
-    }
-  },{
-    "string": 3,
-    "notes": {
-      "2": "A"
-    }
-  },{
-    "string": 2,
-    "notes": {
-      "1": "C",
-      "3": "D",
-    }
-  },{
-    "string": 1,
-    "notes": {
-      "1": "F",
-      "3": "G",
-    }
-  }
-];
-
 $(document).ready(function() {
 
-    drawInlays();
     drawStringNotes();
-    drawNotes();
+    queryNotes();
+    drawInlays();
 });
 
 /**
@@ -72,14 +29,14 @@ function drawInlays() {
 
     // single inlays
     $.each(singleInlays.frets, function(index, fret) {
-        $(".string" + singleInlays.string + "> .fret" + fret).html(singleInlayHtml);
+        $(".string" + singleInlays.string + "> .fret" + fret).append(singleInlayHtml);
     });
 
     // double inlays
     $.each(doubleInlays.frets, function(index, fret) {
 
         $.each(doubleInlays.strings, function(index, string) {
-            $(".string" + string + "> .fret" + fret).html(doubleInlayHtml);
+            $(".string" + string + "> .fret" + fret).append(doubleInlayHtml);
         });
     });
 }
@@ -101,16 +58,38 @@ function drawStringNotes() {
 }
 
 /**
+ * Queries notes from database.
+ */
+function queryNotes() {
+
+    $.ajax({
+      url: "notes.php",
+      data: {
+        testdata: 1
+      },
+      success: function(notes) {
+
+         drawNotes(notes);
+      }
+    });
+}
+
+/**
  * Draws fretted notes.
  */
-function drawNotes() {
+function drawNotes(notes) {
 
+    // for each string
     $.each(notes, function(index, frettedNotes) {
 
+        // for each note
         $.each(frettedNotes.notes, function(fret, note) {
 
-            var noteHtml = '<div class="note">' + note + "</div>";
-            $(".string" + frettedNotes.string + "> .fret" + fret).html(noteHtml);
+            if (note != null)
+            {
+                var noteHtml = '<div class="note">' + note + "</div>";
+                $(".string" + frettedNotes.string + "> ." + fret).append(noteHtml);
+            }
         });
     });
 }

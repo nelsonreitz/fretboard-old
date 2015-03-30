@@ -1,8 +1,9 @@
 <?php
 
-    $strings =  6;
-    $frets   = 12;
+    // configuration
+    require('../models/model.php');
 
+    // render page
     require('../views/index.php');
 
 ?>
