@@ -1,3 +1,6 @@
+var strings = 6;
+
+var stringNotes = ["E", "A", "D", "G", "B", "E"];
 
 var singleInlays = {
   "string": 3,
@@ -12,6 +15,7 @@ var doubleInlays = {
 $(document).ready(function() {
 
     drawInlays();
+    drawStringNotes();
 });
 
 /**
@@ -25,7 +29,7 @@ function drawInlays() {
 
     // single inlays
     $.each(singleInlays.frets, function(index, fret) {
-            $(".string" + singleInlays.string + "> .fret" + fret).html(singleInlayHtml);
+        $(".string" + singleInlays.string + "> .fret" + fret).html(singleInlayHtml);
     });
 
     // double inlays
@@ -35,4 +39,19 @@ function drawInlays() {
             $(".string" + string + "> .fret" + fret).html(doubleInlayHtml);
         });
     });
+}
+
+/**
+ * Draws open string notes.
+ */
+function drawStringNotes() {
+
+    for (i = 0; i < strings; i++) {
+
+        // html div
+        var stringNoteHtml = '<div class="string_note">' + stringNotes[i] + "</div>";
+
+        // draw note on corresponding string
+        $(".string" + (i + 1) + "> .fret0").html(stringNoteHtml);
+    }
 }

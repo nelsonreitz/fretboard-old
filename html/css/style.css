@@ -47,6 +47,13 @@ body {
     height: 15px;
 }
 
+.string_note {
+    position: absolute;
+    top: -8px;
+    left: -20px;
+    font-size: 14px;
+}
+
 .note {
     position: absolute;
     top: -8px;
