@@ -18,55 +18,21 @@
 
   <table id="fretboard">
     <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td><div class="marker"></div></td>
-        <td></td>
-        <td><div class="marker"></div></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><div class="note">F</div></td>
-        <td></td>
-        <td><div class="note">G</div></td>
-        <td></td>
-        <td><div class="note">A</div></td>
-      </tr>
+
+      <?php for ($i = 0; $i < $strings + 1; $i++): ?>
+
+          <tr class="string<?= $i ?>">
+
+            <?php for ($j = 0; $j < $frets + 1; $j++): ?>
+
+                <td class="fret<?= $j ?>"></td>
+
+            <?php endfor ?>
+
+          </tr>
+
+      <?php endfor ?>
+
     </tbody>
   </table>
 
