@@ -29,7 +29,7 @@
     </thead>
     <tbody>
 
-      <?php for ($i = $strings + 1; $i > 0; $i--): ?>
+      <?php for ($i = 0; $i < $strings + 1; $i++): ?>
 
           <tr class="string<?= $i ?>">
 

@@ -2,7 +2,7 @@ var strings = 6;
 var stringNotes = ["E", "A", "D", "G", "B", "E"];
 
 var singleInlays = {
-  "string": 4,
+  "string": 3,
   "frets": [3, 5, 7, 9, 15, 17, 19, 21]
 };
 
@@ -13,7 +13,7 @@ var doubleInlays = {
 
 var notes = [
   {
-    "string": 1,
+    "string": 6,
     "notes": {
       "1": "F",
       "3": "G",
@@ -22,31 +22,31 @@ var notes = [
       "8": "C"
     }
   },{
-    "string": 2,
+    "string": 5,
     "notes": {
       "2": "B",
       "3": "C",
       "5": "D"
     }
   },{
-    "string": 3,
+    "string": 4,
     "notes": {
       "2": "E",
       "3": "F",
     }
   },{
-    "string": 4,
+    "string": 3,
     "notes": {
       "2": "A"
     }
   },{
-    "string": 5,
+    "string": 2,
     "notes": {
       "1": "C",
       "3": "D",
     }
   },{
-    "string": 6,
+    "string": 1,
     "notes": {
       "1": "F",
       "3": "G",
@@ -95,7 +95,8 @@ function drawStringNotes() {
         var stringNoteHtml = '<div class="string_note">' + stringNotes[i] + "</div>";
 
         // draw note on corresponding string
-        $(".string" + (i + 1) + "> .fret0").html(stringNoteHtml);
+        var stringNumber = strings - i;
+        $(".string" + (stringNumber) + "> .fret0").html(stringNoteHtml);
     }
 }
 
@@ -109,7 +110,6 @@ function drawNotes() {
         $.each(frettedNotes.notes, function(fret, note) {
 
             var noteHtml = '<div class="note">' + note + "</div>";
-
             $(".string" + frettedNotes.string + "> .fret" + fret).html(noteHtml);
         });
     });
