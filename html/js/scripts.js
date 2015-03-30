@@ -3,7 +3,7 @@ var strings = 6;
 var stringNotes = ["E", "A", "D", "G", "B", "E"];
 
 var singleInlays = {
-  "string": 3,
+  "string": 4,
   "frets": [3, 5, 7, 9, 15, 17, 19, 21]
 };
 
