@@ -7,15 +7,18 @@
      * http://github.com/nelsonreitz/fretboard
      */
 
-    // global constants
+    // databse credentials
     define('DB_NAME', 'fretboard');
     define('DB_SERVER', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', 'root');
 
-    // global variables
+    // global constants
     define('STRINGS', 6);
     define('FRETS', 12);
+
+    // tunings order string for mysql sort
+    define('TUNINGS_ORDER', '"E Standard", "Drop D", "D Standard", "Drop C"');
 
     /**
      * Executes SQL statement, possibly with parameters, returning
@@ -135,7 +138,7 @@
      */
     function query_tunings() {
 
-        $query = query('SELECT * FROM tunings');
+        $query = query('SELECT * FROM tunings ORDER BY FIELD(name,' . TUNINGS_ORDER . ')');
         return $query;
     }
 
