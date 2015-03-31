@@ -76,6 +76,7 @@ function queryNotes(tuning) {
       },
       success: function(notes) {
 
+          clearNotes();
           drawStringNotes(notes.open_notes);
           drawNotes(notes.fretted_notes);
       }
@@ -100,4 +101,12 @@ function drawNotes(notes) {
             }
         });
     });
+}
+
+/**
+ * Clears notes on the fretboard.
+ */
+function clearNotes() {
+
+    $(".note").parent().empty();
 }
