@@ -97,7 +97,7 @@ function drawNotes(notes) {
             if (note != null)
             {
                 var noteHtml = '<div class="note">' + note + "</div>";
-                $(".string" + frettedNotes.string + "> ." + fret).append(noteHtml);
+                $("." + frettedNotes.string + " > ." + fret).append(noteHtml);
             }
         });
     });
