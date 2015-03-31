@@ -103,12 +103,9 @@
                 $query = query('SELECT * FROM notes WHERE open = ?', $value);
 
                 // for each fret
-                foreach ($query[0] as $key => $value)
+                foreach ($query[0] as $fret => $note)
                 {
-                    if ($key !== 'open')
-                    {
-                        $notes[$i]['notes'][$key] = $value;
-                    }
+                    $notes[$i]['notes'][$fret] = $note;
                 }
 
                 // increment notes index
@@ -117,27 +114,6 @@
         }
 
         return $notes;
-    }
-
-    /**
-     * Queries open string notes.
-     */
-    function query_open_strings($tuning) {
-
-        $string_notes = [];
-
-        $query = query('SELECT * FROM tunings WHERE name = ?', $tuning);
-
-        // foreach string
-        foreach ($query[0] as $key => $value)
-        {
-            if ($key !== "name")
-            {
-                $string_notes[$key] = $value;
-            }
-        }
-
-        return $string_notes;
     }
 
     /**

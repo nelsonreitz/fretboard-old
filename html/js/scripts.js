@@ -50,21 +50,6 @@ function drawInlays() {
 }
 
 /**
- * Draws open string notes.
- */
-function drawStringNotes(notes) {
-
-    $.each(notes, function(key, value) {
-
-        // html div
-        var stringNoteHtml = '<div class="string_note">' + value + "</div>";
-
-        // draw note on corresponding string
-        $("." + key + "> .fret0").html(stringNoteHtml);
-    });
-}
-
-/**
  * Queries notes from database.
  */
 function queryNotes(tuning) {
@@ -74,11 +59,10 @@ function queryNotes(tuning) {
       data: {
         tuning: tuning
       },
-      success: function(notes) {
+      success: function(stringNotes) {
 
           clearNotes();
-          drawStringNotes(notes.open_notes);
-          drawNotes(notes.fretted_notes);
+          drawNotes(stringNotes);
       }
     });
 }
@@ -86,18 +70,25 @@ function queryNotes(tuning) {
 /**
  * Draws fretted notes.
  */
-function drawNotes(notes) {
+function drawNotes(stringNotes) {
 
     // for each string
-    $.each(notes, function(index, frettedNotes) {
+    $.each(stringNotes, function(index, string) {
 
         // for each note
-        $.each(frettedNotes.notes, function(fret, note) {
+        $.each(string.notes, function(fret, note) {
 
-            if (note != null)
-            {
+            if (fret == "open") {
+
+                // draw open string note
+                var stringNoteHtml = '<div class="string_note">' + note + "</div>";
+                $("." + string.string + " > .fret0").html(stringNoteHtml);
+
+            } else if (note != null) {
+
+                // draw fretted note
                 var noteHtml = '<div class="note">' + note + "</div>";
-                $("." + frettedNotes.string + " > ." + fret).append(noteHtml);
+                $("." + string.string + " > ." + fret).append(noteHtml);
             }
         });
     });
