@@ -44,7 +44,7 @@
     </tbody>
   </table>
 
-  <select>
+  <select id="tunings_select">
 
     <?php foreach ($tunings as $tuning): ?>
         <option value="<?= $tuning['name'] ?>"><?= $tuning['name'] ?></option>

@@ -80,14 +80,14 @@
     /**
      * Queries notes.
      */
-    function query_notes()
+    function query_notes($tuning)
     {
         $notes = [];
 
         // for each string
         for ($i = STRINGS; $i > 0; $i--)
         {
-            $query = query('SELECT * FROM notes WHERE string = ?', $i);
+            $query = query('SELECT * FROM notes WHERE tuning = ? AND string = ?', $tuning, $i);
 
             if (!empty($query))
             {
@@ -112,11 +112,11 @@
     /**
      * Queries open string notes.
      */
-    function query_open_strings() {
+    function query_open_strings($tuning) {
 
         $string_notes = [];
 
-        $query = query('SELECT * FROM tunings WHERE name = ?', "E Standard");
+        $query = query('SELECT * FROM tunings WHERE name = ?', $tuning);
 
         // foreach string
         foreach ($query[0] as $key => $value)

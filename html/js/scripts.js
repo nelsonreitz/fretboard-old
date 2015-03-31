@@ -1,3 +1,7 @@
+// default tuning
+var defaultTuning = "E Standard";
+
+// inlays positions
 var singleInlays = {
   "string": 3,
   "frets": [3, 5, 7, 9, 15, 17, 19, 21]
@@ -10,8 +14,16 @@ var doubleInlays = {
 
 $(document).ready(function() {
 
-    queryNotes();
+    // draw default tuning notes 
+    queryNotes(defaultTuning);
     drawInlays();
+
+    // draw notes of selected tuning
+    $("#tunings_select").change(function() {
+
+        var tuning = $("#tunings_select").val();
+        queryNotes(tuning);
+    });
 });
 
 /**
@@ -55,12 +67,12 @@ function drawStringNotes(notes) {
 /**
  * Queries notes from database.
  */
-function queryNotes() {
+function queryNotes(tuning) {
 
     $.ajax({
       url: "notes.php",
       data: {
-        testdata: 1
+        tuning: tuning
       },
       success: function(notes) {
 
@@ -84,7 +96,7 @@ function drawNotes(notes) {
             if (note != null)
             {
                 var noteHtml = '<div class="note">' + note + "</div>";
-                $(".string" + frettedNotes.string + "> ." + fret).append(noteHtml);
+                $(".string" + frettedNotes.string + "> ." + fret).html(noteHtml);
             }
         });
     });
