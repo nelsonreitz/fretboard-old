@@ -15,8 +15,8 @@ var doubleInlays = {
 $(document).ready(function() {
 
     // draw default tuning notes 
-    queryNotes(defaultTuning);
     drawInlays();
+    queryNotes(defaultTuning);
 
     // draw notes of selected tuning
     $("#tunings_select").change(function() {
@@ -37,14 +37,14 @@ function drawInlays() {
 
     // single inlays
     $.each(singleInlays.frets, function(index, fret) {
-        $(".string" + singleInlays.string + "> .fret" + fret).append(singleInlayHtml);
+        $(".string" + singleInlays.string + "> .fret" + fret).html(singleInlayHtml);
     });
 
     // double inlays
     $.each(doubleInlays.frets, function(index, fret) {
 
         $.each(doubleInlays.strings, function(index, string) {
-            $(".string" + string + "> .fret" + fret).append(doubleInlayHtml);
+            $(".string" + string + "> .fret" + fret).html(doubleInlayHtml);
         });
     });
 }
@@ -97,7 +97,7 @@ function drawNotes(notes) {
             if (note != null)
             {
                 var noteHtml = '<div class="note">' + note + "</div>";
-                $(".string" + frettedNotes.string + "> ." + fret).html(noteHtml);
+                $(".string" + frettedNotes.string + "> ." + fret).append(noteHtml);
             }
         });
     });
@@ -108,5 +108,5 @@ function drawNotes(notes) {
  */
 function clearNotes() {
 
-    $(".note").parent().empty();
+    $(".note").remove();
 }
