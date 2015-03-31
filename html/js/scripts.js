@@ -59,21 +59,21 @@ function queryNotes(tuning) {
       data: {
         tuning: tuning
       },
-      success: function(stringNotes) {
+      success: function(strings) {
 
           clearNotes();
-          drawNotes(stringNotes);
+          drawNotes(strings);
       }
     });
 }
 
 /**
- * Draws fretted notes.
+ * Draws notes.
  */
-function drawNotes(stringNotes) {
+function drawNotes(strings) {
 
     // for each string
-    $.each(stringNotes, function(index, string) {
+    $.each(strings, function(string_number, string) {
 
         // for each note
         $.each(string.notes, function(fret, note) {
@@ -81,14 +81,14 @@ function drawNotes(stringNotes) {
             if (fret == "open") {
 
                 // draw open string note
-                var stringNoteHtml = '<div class="string_note">' + note + "</div>";
-                $("." + string.string + " > .fret0").html(stringNoteHtml);
+                var stringNoteHtml = '<div class="open_note">' + note + "</div>";
+                $("." + string_number + " > .fret0").html(stringNoteHtml);
 
             } else if (note != null) {
 
                 // draw fretted note
                 var noteHtml = '<div class="note">' + note + "</div>";
-                $("." + string.string + " > ." + fret).append(noteHtml);
+                $("." + string_number + " > ." + fret).append(noteHtml);
             }
         });
     });

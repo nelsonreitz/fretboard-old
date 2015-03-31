@@ -85,9 +85,8 @@
      */
     function query_notes($tuning)
     {
-        // prepare variables for associative array
-        $i = 0;
-        $notes = [];
+        // prepare associative array
+        $strings = [];
 
         // query open strings
         $query = query('SELECT * FROM tunings WHERE name = ?', $tuning);
@@ -97,23 +96,18 @@
         {
             if ($key !== 'name')
             {
-                $notes[$i]['string'] = $key;
-
                 // select corresponding notes
                 $query = query('SELECT * FROM notes WHERE open = ?', $value);
 
                 // for each fret
                 foreach ($query[0] as $fret => $note)
                 {
-                    $notes[$i]['notes'][$fret] = $note;
+                    $strings[$key]['notes'][$fret] = $note;
                 }
-
-                // increment notes index
-                ++$i;
             }
         }
 
-        return $notes;
+        return $strings;
     }
 
     /**
