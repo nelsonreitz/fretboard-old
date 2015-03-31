@@ -44,5 +44,13 @@
     </tbody>
   </table>
 
+  <select>
+
+    <?php foreach ($tunings as $tuning): ?>
+        <option value="<?= $tuning['name'] ?>"><?= $tuning['name'] ?></option>
+    <?php endforeach ?>
+
+  </select>
+
   </body>
 </html>

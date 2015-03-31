@@ -130,4 +130,13 @@
         return $string_notes;
     }
 
+    /**
+     * Queries a list of tunings from database.
+     */
+    function query_tunings() {
+
+        $query = query('SELECT * FROM tunings');
+        return $query;
+    }
+
 ?>
