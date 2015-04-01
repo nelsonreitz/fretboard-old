@@ -1,6 +1,9 @@
 // default tuning
 var defaultTuning = "E Standard";
 
+// default number of fret
+var defaultFrets = 12;
+
 // number of frets to change octave
 var octave = 12;
 
@@ -17,17 +20,34 @@ var doubleInlays = {
 
 $(document).ready(function() {
 
-    // draw default tuning notes 
-    drawInlays();
-    queryNotes(defaultTuning);
-
     // draw notes of selected tuning
     $("#tunings_select").change(function() {
 
         var tuning = $("#tunings_select").val();
         queryNotes(tuning);
     });
+
+    drawFretboard();
 });
+
+/**
+ * Draws the fretboard on the page.
+ */
+function drawFretboard() {
+
+    $.ajax({
+      url: "index.php",
+      data: {
+        frets: 10
+      },
+      success: function(fretboardHtml) {
+
+          $("#fretboard").html(fretboardHtml);
+          drawInlays();
+          queryNotes(defaultTuning);
+      }
+    });
+}
 
 /**
  * Draws inlays on the fretboard.

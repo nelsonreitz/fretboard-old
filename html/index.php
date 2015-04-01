@@ -3,10 +3,19 @@
     // configuration
     require('../models/model.php');
 
-    // query tunings
-    $tunings = query_tunings();
+    if (isset($_GET['frets']))
+    {
+        // print fretboard html
+        extract(['frets' => $_GET['frets']]);
+        require('../views/fretboard.php');
+    }
+    else
+    {
+        // query tunings
+        $tunings = query_tunings();
 
-    // render page
-    require('../views/index.php');
+        // render page
+        require('../views/index.php');
+    }
 
 ?>
