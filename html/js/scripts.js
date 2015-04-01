@@ -1,6 +1,9 @@
 // default tuning
 var defaultTuning = "E Standard";
 
+// number of frets to change octave
+var octave = 12;
+
 // inlays positions
 var singleInlays = {
   "string": 3,
@@ -85,6 +88,9 @@ function drawNotes(strings) {
             // draw fretted note
             var noteHtml = '<div class="note">' + note + "</div>";
             $("." + string_number + " > .fret" + frets).append(noteHtml);
+
+            // draw fretted note an octave higher
+            $("." + string_number + " > .fret" + (parseInt(frets) + octave)).append(noteHtml);
         });
     });
 }
