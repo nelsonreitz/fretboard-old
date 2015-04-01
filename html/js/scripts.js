@@ -21,27 +21,28 @@ var doubleInlays = {
 $(document).ready(function() {
 
     // draw default fretboard
-    drawFretboard(defaultFrets);
+    drawFretboard(defaultFrets, defaultTuning);
 
     // draw notes of selected tuning
     $("#tunings_select").change(function() {
 
         var tuning = $("#tunings_select").val();
-        queryNotes(tuning);
+        drawNotes(tuning);
     });
 
-    // draw notes of selected tuning
+    // draw fretboard with selected number of frets
     $("#frets_select").change(function() {
 
+        var tuning = $("#tunings_select").val();
         var frets = $("#frets_select").val();
-        drawFretboard(frets);
+        drawFretboard(frets, tuning);
     });
 });
 
 /**
  * Draws the fretboard on the page.
  */
-function drawFretboard(frets) {
+function drawFretboard(frets, tuning) {
 
     $.ajax({
       url: "index.php",
@@ -52,7 +53,7 @@ function drawFretboard(frets) {
 
           $("#fretboard").html(fretboardHtml);
           drawInlays();
-          queryNotes(defaultTuning);
+          drawNotes(tuning);
       }
     });
 }
@@ -81,9 +82,9 @@ function drawInlays() {
 }
 
 /**
- * Queries notes from database.
+ * Queries and draws notes from database.
  */
-function queryNotes(tuning) {
+function drawNotes(tuning) {
 
     $.ajax({
       url: "notes.php",
@@ -93,33 +94,26 @@ function queryNotes(tuning) {
       success: function(strings) {
 
           clearNotes();
-          drawNotes(strings);
+
+          // for each string
+          $.each(strings, function(string_number, string) {
+
+              // draw open string note
+              var stringNoteHtml = '<div class="open_note">' + string.open + "</div>";
+              $("." + string_number + " > .fret0").html(stringNoteHtml);
+
+              // for each note
+              $.each(string.notes, function(note, frets) {
+
+                  // draw fretted note
+                  var noteHtml = '<div class="note">' + note + "</div>";
+                  $("." + string_number + " > .fret" + frets).append(noteHtml);
+
+                  // draw fretted note an octave higher
+                  $("." + string_number + " > .fret" + (parseInt(frets) + octave)).append(noteHtml);
+              });
+          });
       }
-    });
-}
-
-/**
- * Draws notes.
- */
-function drawNotes(strings) {
-
-    // for each string
-    $.each(strings, function(string_number, string) {
-
-        // draw open string note
-        var stringNoteHtml = '<div class="open_note">' + string.open + "</div>";
-        $("." + string_number + " > .fret0").html(stringNoteHtml);
-
-        // for each note
-        $.each(string.notes, function(note, frets) {
-
-            // draw fretted note
-            var noteHtml = '<div class="note">' + note + "</div>";
-            $("." + string_number + " > .fret" + frets).append(noteHtml);
-
-            // draw fretted note an octave higher
-            $("." + string_number + " > .fret" + (parseInt(frets) + octave)).append(noteHtml);
-        });
     });
 }
 
