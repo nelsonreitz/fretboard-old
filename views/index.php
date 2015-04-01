@@ -28,5 +28,11 @@
 
   </select>
 
+  <select id="frets_select">
+    <option value="12">12</option>
+    <option value="15">15</option>
+    <option value="24">24</option>
+  </select>
+
   </body>
 </html>

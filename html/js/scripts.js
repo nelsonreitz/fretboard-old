@@ -20,6 +20,9 @@ var doubleInlays = {
 
 $(document).ready(function() {
 
+    // draw default fretboard
+    drawFretboard(defaultFrets);
+
     // draw notes of selected tuning
     $("#tunings_select").change(function() {
 
@@ -27,18 +30,23 @@ $(document).ready(function() {
         queryNotes(tuning);
     });
 
-    drawFretboard();
+    // draw notes of selected tuning
+    $("#frets_select").change(function() {
+
+        var frets = $("#frets_select").val();
+        drawFretboard(frets);
+    });
 });
 
 /**
  * Draws the fretboard on the page.
  */
-function drawFretboard() {
+function drawFretboard(frets) {
 
     $.ajax({
       url: "index.php",
       data: {
-        frets: 10
+        frets: frets
       },
       success: function(fretboardHtml) {
 
