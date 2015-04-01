@@ -17,22 +17,22 @@
   </head>
   <body>
 
-  <div id="fretboard">
-  </div><!-- #fretboard -->
+    <div id="fretboard">
+    </div><!-- #fretboard -->
 
-  <select id="tunings_select">
+    <select id="tunings_select">
 
-    <?php foreach ($tunings as $tuning): ?>
-        <option value="<?= $tuning['name'] ?>"><?= $tuning['name'] ?></option>
-    <?php endforeach ?>
+      <?php foreach ($tunings as $tuning): ?>
+          <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
+      <?php endforeach ?>
 
-  </select>
+    </select>
 
-  <select id="frets_select">
-    <option value="12">12</option>
-    <option value="15">15</option>
-    <option value="24">24</option>
-  </select>
+    <select id="frets_select">
+      <option value="12">12</option>
+      <option value="15">15</option>
+      <option value="24">24</option>
+    </select>
 
   </body>
 </html>

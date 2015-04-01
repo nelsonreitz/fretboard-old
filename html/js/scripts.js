@@ -1,5 +1,5 @@
-// default tuning
-var defaultTuning = "E Standard";
+// default tuning abbr
+var defaultTuning = "e_std";
 
 // default number of fret
 var defaultFrets = 12;

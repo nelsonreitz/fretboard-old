@@ -17,7 +17,7 @@
     define('STRINGS', 6);
 
     // tunings order string for mysql sort
-    define('TUNINGS_ORDER', '"E Standard", "Drop D", "Eb Standard", "D Standard", "Drop C"');
+    define('TUNINGS_ORDER', '"e_std", "drop_d", "eb_std", "d_std", "drop_c"');
 
     /**
      * Executes SQL statement, possibly with parameters, returning
@@ -88,12 +88,12 @@
         $strings = [];
 
         // query open strings
-        $query = query('SELECT * FROM tunings WHERE name = ?', $tuning);
+        $query = query('SELECT * FROM tunings WHERE abbr = ?', $tuning);
 
         // for each string
         foreach ($query[0] as $key => $value)
         {
-            if ($key !== 'name')
+            if ($key !== 'name' && $key !== 'abbr')
             {
                 // select corresponding notes
                 $query = query('SELECT * FROM notes WHERE open = ?', $value);
@@ -122,7 +122,7 @@
      */
     function query_tunings() {
 
-        $query = query('SELECT * FROM tunings ORDER BY FIELD(name,' . TUNINGS_ORDER . ')');
+        $query = query('SELECT * FROM tunings ORDER BY FIELD(abbr,' . TUNINGS_ORDER . ')');
         return $query;
     }
 
