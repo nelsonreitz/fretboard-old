@@ -75,21 +75,16 @@ function drawNotes(strings) {
     // for each string
     $.each(strings, function(string_number, string) {
 
+        // draw open string note
+        var stringNoteHtml = '<div class="open_note">' + string.open + "</div>";
+        $("." + string_number + " > .fret0").html(stringNoteHtml);
+
         // for each note
-        $.each(string.notes, function(fret, note) {
+        $.each(string.notes, function(note, frets) {
 
-            if (fret == "open") {
-
-                // draw open string note
-                var stringNoteHtml = '<div class="open_note">' + note + "</div>";
-                $("." + string_number + " > .fret0").html(stringNoteHtml);
-
-            } else if (note != null) {
-
-                // draw fretted note
-                var noteHtml = '<div class="note">' + note + "</div>";
-                $("." + string_number + " > ." + fret).append(noteHtml);
-            }
+            // draw fretted note
+            var noteHtml = '<div class="note">' + note + "</div>";
+            $("." + string_number + " > .fret" + frets).append(noteHtml);
         });
     });
 }

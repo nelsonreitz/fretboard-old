@@ -100,9 +100,17 @@
                 $query = query('SELECT * FROM notes WHERE open = ?', $value);
 
                 // for each fret
-                foreach ($query[0] as $fret => $note)
+                foreach ($query[0] as $note => $frets)
                 {
-                    $strings[$key]['notes'][$fret] = $note;
+                    // build associative array
+                    if ($note === 'open')
+                    {
+                        $strings[$key]['open'] = $frets;
+                    }
+                    else
+                    {
+                        $strings[$key]['notes'][$note] = $frets;
+                    }
                 }
             }
         }
