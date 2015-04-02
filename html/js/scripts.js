@@ -105,11 +105,17 @@ function drawNotes(tuning) {
               // for each note
               $.each(string.notes, function(note, frets) {
 
-                  // draw fretted note
-                  var noteHtml = '<div class="note">' + note + "</div>";
+                  // custom class for half-steps notes
+                  if (note.length > 1) {
+                      var noteHtml = '<div class="halfstep">' + note + "</div>";
+                  } else {
+                      var noteHtml = '<div class="note">' + note + "</div>";
+                  }
+
+                  // draw note
                   $("." + string_number + " > .fret" + frets).append(noteHtml);
 
-                  // draw fretted note an octave higher
+                  // draw note an octave higher
                   $("." + string_number + " > .fret" + (parseInt(frets) + octave)).append(noteHtml);
               });
           });
@@ -123,4 +129,5 @@ function drawNotes(tuning) {
 function clearNotes() {
 
     $(".note").remove();
+    $(".halfstep").remove();
 }
