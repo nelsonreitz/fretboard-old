@@ -34,5 +34,8 @@
       <option value="24">24</option>
     </select>
 
+    <label for="toggle_halfsteps">Show half-steps:</label>
+    <input type="checkbox" id="toggle_halfsteps">
+
   </body>
 </html>

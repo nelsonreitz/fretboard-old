@@ -37,6 +37,16 @@ $(document).ready(function() {
         var frets = $("#frets_select").val();
         drawFretboard(frets, tuning);
     });
+
+    // toggle half-steps on checkbox change
+    $("#toggle_halfsteps").change(function() {
+
+        if (this.checked) {
+            $(".halfstep").show();
+        } else {
+            $(".halfstep").hide();
+        }
+    });
 });
 
 /**
@@ -117,6 +127,11 @@ function drawNotes(tuning) {
 
                   // draw note an octave higher
                   $("." + string_number + " > .fret" + (parseInt(frets) + octave)).append(noteHtml);
+
+                  // hide half-steps by default
+                  if ($("#toggle_halfsteps").prop("checked") == false) {
+                      $(".halfstep").hide();
+                  }
               });
           });
       }
