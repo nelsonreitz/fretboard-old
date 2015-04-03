@@ -20,6 +20,7 @@
     <div id="fretboard">
     </div><!-- #fretboard -->
 
+    <label for="tunings_select">Tuning:</label>
     <select id="tunings_select">
 
       <?php foreach ($tunings as $tuning): ?>
@@ -28,6 +29,7 @@
 
     </select>
 
+    <label for="frets_select">Frets:</label>
     <select id="frets_select">
       <option value="12">12</option>
       <option value="15">15</option>
