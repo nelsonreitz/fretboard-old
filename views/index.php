@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Fretboard</title>
+    <title>Fretboard Chart</title>
 
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -17,27 +17,35 @@
   </head>
   <body>
 
+    <header class="header" role="banner">
+      <h1 class="site-title"><a href="/">Fretboard Chart</a></h1>
+    </header>
+
     <div id="fretboard">
     </div><!-- #fretboard -->
 
-    <label for="tunings_select">Tuning:</label>
-    <select id="tunings_select">
+    <div class="options">
 
-      <?php foreach ($tunings as $tuning): ?>
-          <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
-      <?php endforeach ?>
+      <label for="tunings_select">Tuning:</label>
+      <select id="tunings_select">
 
-    </select>
+        <?php foreach ($tunings as $tuning): ?>
+            <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
+        <?php endforeach ?>
 
-    <label for="frets_select">Frets:</label>
-    <select id="frets_select">
-      <option value="12">12</option>
-      <option value="15">15</option>
-      <option value="24">24</option>
-    </select>
+      </select>
 
-    <label for="toggle_halfsteps">Show half-steps:</label>
-    <input type="checkbox" id="toggle_halfsteps">
+      <label for="frets_select">Frets:</label>
+      <select id="frets_select">
+        <option value="12">12</option>
+        <option value="15">15</option>
+        <option value="24">24</option>
+      </select>
+
+      <label for="toggle_halfsteps">Show half-steps:</label>
+      <input type="checkbox" id="toggle_halfsteps">
+
+    </div><!-- .options -->
 
   </body>
 </html>
