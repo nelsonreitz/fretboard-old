@@ -2,7 +2,7 @@
 var defaultTuning = "e_std";
 
 // default number of fret
-var defaultFrets = 12;
+var defaultFrets = 15;
 
 // number of frets to change octave
 var octave = 12;
@@ -89,10 +89,13 @@ function drawInlays() {
             $(".string" + string + "> .fret" + fret).html(doubleInlayHtml);
         });
     });
+
+    // center double inlays
+    center(".double_inlay");
 }
 
 /**
- * Queries and draws notes from database.
+ * Queries and draws notes.
  */
 function drawNotes(tuning) {
 
@@ -134,7 +137,23 @@ function drawNotes(tuning) {
                   }
               });
           });
+
+          // center notes
+          center(".note");
+          center(".halfstep");
       }
+    });
+}
+
+/**
+ * Centers each element of given class on their frets.
+ */
+function center(elementClass) {
+
+    $(elementClass).each(function() {
+
+        var yPos = ($(this).parent().width() / 2) - ($(this).width() / 2);
+        $(this).css("left", yPos);
     });
 }
 
