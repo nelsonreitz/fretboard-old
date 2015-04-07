@@ -2,7 +2,7 @@
 var defaultTuning = "e_std";
 
 // default number of fret
-var defaultFrets = 15;
+var defaultFrets = 12;
 
 // number of frets to change octave
 var octave = 12;

@@ -84,15 +84,23 @@ body {
 
 .note {
     position: absolute;
-    top: -8px;
+    top: -11px;
+    background-color: #c9c9c9;
+    width: 20px;
+    height: 20px;
+    padding-top: 3px;
 }
 
 .halfstep {
     position: absolute;
-    top: -8px;
+    top: -9px;
     left: 30px;
     color: grey;
     font-size: 14px;
+    width: 25px;
+    height: 16px;
+    background-color: #e5e5e5;
+    padding-top: 1px;
 }
 
 .single_inlay {
