@@ -30,6 +30,11 @@ body {
     margin: 0 auto;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 /* Header */
 
 .header {
@@ -82,32 +87,26 @@ body {
     font-size: 14px;
 }
 
-.note {
+.note, .halfstep {
     position: absolute;
     top: -11px;
-    background-color: #c9c9c9;
     width: 20px;
     height: 20px;
     padding-top: 3px;
+    border-radius: 2px;
 }
 
 .halfstep {
-    position: absolute;
-    top: -9px;
-    left: 30px;
     color: grey;
-    font-size: 14px;
-    width: 25px;
-    height: 16px;
-    background-color: #e5e5e5;
-    padding-top: 1px;
+    font-size: 13px;
+    padding-top: 4px;
 }
 
 .single_inlay {
     width: 8px;
     height: 8px;
     border-radius: 100%;
-    background: black;
+    background: #ededed;
     margin-left: auto;
     margin-right: auto;
 }
@@ -116,12 +115,60 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 100%;
-    background: black;
+    background: #ededed;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
     top: -5px;
     left: 25px;
+}
+
+.note.A {
+    background-color: #FF8C94;
+}
+
+.note.B {
+    background-color: #DCEDC2;
+}
+
+.note.C {
+    background-color: #FFAAA6;
+}
+
+.note.D {
+    background-color: #A8E6CE;
+}
+
+.note.E {
+    background-color: #FFD3B5;
+}
+
+.note.F {
+    background-color: #b0d2f4;
+}
+
+.note.G {
+    background-color: #c1abea;
+}
+
+.halfstep.Ab {
+    background-color: #ffe5e7;
+}
+
+.halfstep.Bb {
+    background-color: #f2fce3;
+}
+
+.halfstep.Db {
+    background-color: #e5fff4;
+}
+
+.halfstep.Eb {
+    background-color: #fff1e8;
+}
+
+.halfstep.Gb {
+    background-color: #ece2ff;
 }
 
 /* Options */

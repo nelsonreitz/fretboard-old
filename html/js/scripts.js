@@ -120,9 +120,9 @@ function drawNotes(tuning) {
 
                   // custom class for half-steps notes
                   if (note.length > 1) {
-                      var noteHtml = '<div class="halfstep">' + note + "</div>";
+                      var noteHtml = '<div class="halfstep ' + note + '">' + note + "</div>";
                   } else {
-                      var noteHtml = '<div class="note">' + note + "</div>";
+                      var noteHtml = '<div class="note ' + note + '">' + note + "</div>";
                   }
 
                   // draw note
