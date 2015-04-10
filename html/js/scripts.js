@@ -47,6 +47,13 @@ $(document).ready(function() {
             $(".halfstep").hide();
         }
     });
+
+    // center elements on resize
+    $(window).resize(function() {
+        center(".note");
+        center(".halfstep");
+        center(".double_inlay");
+    });
 });
 
 /**

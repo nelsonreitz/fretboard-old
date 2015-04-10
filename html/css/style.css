@@ -106,7 +106,7 @@ a {
     width: 8px;
     height: 8px;
     border-radius: 100%;
-    background: #ededed;
+    background: grey;
     margin-left: auto;
     margin-right: auto;
 }
@@ -115,7 +115,7 @@ a {
     width: 8px;
     height: 8px;
     border-radius: 100%;
-    background: #ededed;
+    background: grey;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
