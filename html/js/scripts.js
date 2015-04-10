@@ -120,7 +120,7 @@ function drawNotes(tuning) {
 
               // draw open string note
               var stringNoteHtml = '<div class="open_note">' + string.open + "</div>";
-              $("." + string_number + " > .fret0").html(stringNoteHtml);
+              $("." + string_number + " > .open").html(stringNoteHtml);
 
               // for each note
               $.each(string.notes, function(note, frets) {

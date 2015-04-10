@@ -2,6 +2,7 @@
   <thead>
     <tr>
 
+      <td></td>
       <?php for ($i = 0; $i < $frets + 1; $i++): ?>
           <td><?= ($i == 0) ? '' : $i ?></td>
       <?php endfor ?>
@@ -14,6 +15,7 @@
 
         <tr class="string<?= $i ?>">
 
+          <td class="open"></td>
           <?php for ($j = 0; $j < $frets + 1; $j++): ?>
               <td class="fret<?= $j ?>"></td>
           <?php endfor ?>
