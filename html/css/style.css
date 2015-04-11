@@ -51,7 +51,8 @@ a {
     width: 100%;
 }
 
-#fretboard thead {
+#fretboard .fretnumbers td {
+    padding-bottom: 12px;
     font-size: 12px;
 }
 

@@ -1,6 +1,6 @@
 <table>
   <thead>
-    <tr>
+    <tr class="fretnumbers">
 
       <td></td>
       <?php for ($i = 0; $i < $frets + 1; $i++): ?>
