@@ -28,6 +28,7 @@ body {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
+    font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -41,6 +42,11 @@ a {
     width: 100%;
     border-bottom: 1px solid grey;
     margin-bottom: 9em;
+}
+
+.site-title {
+    margin: 1.5em 0 0.2em 0;
+    text-transform: uppercase;
 }
 
 /* Fretboard */
@@ -98,14 +104,13 @@ a {
     top: -11px;
     width: 20px;
     height: 20px;
-    padding-top: 3px;
     border-radius: 2px;
 }
 
 .halfstep {
     color: grey;
     font-size: 13px;
-    padding-top: 4px;
+    padding-top: 2px;
 }
 
 .single_inlay {

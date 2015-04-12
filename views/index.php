@@ -8,6 +8,8 @@
 
     <title>Fretboard Chart</title>
 
+    <link href='http://fonts.googleapis.com/css?family=Roboto:700,400' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
 
@@ -18,7 +20,7 @@
   <body>
 
     <header class="header" role="banner">
-      <h1 class="site-title"><a href="/">Fretboard Chart</a></h1>
+      <h1 class="site-title"><a href="/">FretChart</a></h1>
     </header>
 
     <div id="fretboard">
