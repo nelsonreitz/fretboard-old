@@ -17,7 +17,7 @@
     define('STRINGS', 6);
 
     // tunings order string for mysql sort
-    define('TUNINGS_ORDER', '"e_std", "drop_d", "eb_std", "d_std", "drop_c"');
+    define('TUNINGS_ORDER', '"e_std", "drop_d", "eb_std", "d_std", "drop_c", "c_std"');
 
     /**
      * Executes SQL statement, possibly with parameters, returning
