@@ -63,10 +63,8 @@ a {
 }
 
 #fretboard tbody td {
-    border-top: 2px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 2px solid black;
+    border-top: 1px solid black;
+    border-right: 3px solid grey;
     width: 104px;
     height: 32px;
     position: relative;
