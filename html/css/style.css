@@ -26,7 +26,6 @@ html {
 
 body {
     width: 100%;
-    max-width: 960px;
     margin: 0 auto;
     font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -40,8 +39,9 @@ a {
 
 .header {
     width: 100%;
+    max-width: 960px;
     border-bottom: 1px solid grey;
-    margin-bottom: 9em;
+    margin: 0 auto 9em auto;
 }
 
 .site-title {
@@ -53,8 +53,8 @@ a {
 
 #fretboard {
     text-align: center;
-    margin-bottom: 6em;
-    width: 100%;
+    margin: 0 auto 6em auto;
+    width: 77%;
 }
 
 #fretboard .fretnumbers td {
@@ -67,7 +67,7 @@ a {
     border-right: 1px solid black;
     border-left: 1px solid black;
     border-bottom: 2px solid black;
-    width: 80px;
+    width: 104px;
     height: 32px;
     position: relative;
 }
@@ -75,6 +75,7 @@ a {
 #fretboard tbody tr td:first-of-type {
     border: none;
     width: 29px;
+    min-width: 16px;
 }
 
 #fretboard .fret0 {
@@ -95,7 +96,7 @@ a {
 
 .open_note {
     position: absolute;
-    top: -7px;
+    top: -9px;
     font-size: 14px;
 }
 
@@ -186,8 +187,10 @@ a {
 
 .options {
     width: 100%;
+    max-width: 960px;
     border-top: 1px solid grey;
     padding-top: 15px;
+    margin: 0 auto;
 }
 
 .toggle_halfsteps {

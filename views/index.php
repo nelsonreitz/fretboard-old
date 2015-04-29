@@ -20,7 +20,7 @@
   <body>
 
     <header class="header" role="banner">
-      <h1 class="site-title"><a href="/">FretChart</a></h1>
+      <h1 class="site-title"><a href="/">Fretboard Chart</a></h1>
     </header>
 
     <div id="fretboard">
