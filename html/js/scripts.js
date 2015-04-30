@@ -24,16 +24,16 @@ $(document).ready(function() {
     drawFretboard(defaultFrets, defaultTuning);
 
     // draw notes of selected tuning
-    $("#tunings_select").change(function() {
+    $("#tuning_select").change(function() {
 
-        var tuning = $("#tunings_select").val();
+        var tuning = $("#tuning_select").val();
         drawNotes(tuning);
     });
 
     // draw fretboard with selected number of frets
     $("#frets_select").change(function() {
 
-        var tuning = $("#tunings_select").val();
+        var tuning = $("#tuning_select").val();
         var frets = $("#frets_select").val();
         drawFretboard(frets, tuning);
     });

@@ -40,8 +40,8 @@ a {
 .header {
     width: 100%;
     max-width: 960px;
-    border-bottom: 1px solid grey;
-    margin: 0 auto 9em auto;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 0 auto 11em auto;
 }
 
 .site-title {
@@ -53,12 +53,12 @@ a {
 
 #fretboard {
     text-align: center;
-    margin: 0 auto 6em auto;
+    margin: 0 auto 4em auto;
     width: 77%;
 }
 
 #fretboard .fretnumbers td {
-    padding-bottom: 12px;
+    padding-bottom: 16px;
     font-size: 12px;
 }
 
@@ -186,11 +186,23 @@ a {
 .options {
     width: 100%;
     max-width: 960px;
-    border-top: 1px solid grey;
+    border-top: 1px solid #dfdfdf;
     padding-top: 15px;
     margin: 0 auto;
 }
 
-.toggle_halfsteps {
+.option {
+    display: inline-block;
+}
+
+.option.tuning {
+    margin-right: 20px;
+}
+
+.option.toggle_halfsteps {
     float: right;
+}
+
+.options label {
+    margin-right: 5px;
 }

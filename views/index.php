@@ -28,26 +28,30 @@
 
     <div class="options">
 
-      <label for="tunings_select">Tuning:</label>
-      <select id="tunings_select">
+      <div class="option tuning">
+        <label for="tuning_select">Tuning:</label>
+        <select id="tuning_select">
 
-        <?php foreach ($tunings as $tuning): ?>
-            <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
-        <?php endforeach ?>
+          <?php foreach ($tunings as $tuning): ?>
+              <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
+          <?php endforeach ?>
 
-      </select>
+        </select>
+      </div><!-- .option -->
 
-      <label for="frets_select">Frets:</label>
-      <select id="frets_select">
-        <option value="12">12</option>
-        <option value="15">15</option>
-        <option value="24">24</option>
-      </select>
+      <div class="option frets">
+        <label for="frets_select">Frets:</label>
+        <select id="frets_select">
+          <option value="12">12</option>
+          <option value="15">15</option>
+          <option value="24">24</option>
+        </select>
+      </div><!-- .option -->
 
-      <div class="toggle_halfsteps">
-        <label for="toggle_halfsteps">Show half-steps:</label>
+      <div class="option toggle_halfsteps">
+        <label for="toggle_halfsteps">Show half-steps</label>
         <input type="checkbox" id="toggle_halfsteps">
-      </div><!-- .toggle_halfsteps -->
+      </div><!-- .option.toggle_halfsteps -->
 
     </div><!-- .options -->
 
