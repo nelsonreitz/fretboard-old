@@ -191,6 +191,25 @@ a {
     margin: 0 auto;
 }
 
+select {
+    background-color: #fcfcfc;
+    border: 1px solid #aeaeae;
+    border-radius: 1px;
+    box-shadow: none;
+    font-size: 15px;
+    height: 28px;
+    width: 125px;
+}
+
+select:focus {
+    border: 1px solid black;
+    outline: none;
+}
+
+.option.frets select {
+    width: 60px;
+}
+
 .option {
     display: inline-block;
 }
