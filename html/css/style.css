@@ -28,10 +28,11 @@ body {
     width: 100%;
     margin: 0 auto;
     font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
 }
 
 a {
-    color: black;
+    color: #444;
     text-decoration: none;
 }
 
@@ -64,7 +65,7 @@ a {
 
 #fretboard tbody td {
     border-top: 1px solid black;
-    border-right: 3px solid grey;
+    border-right: 3px solid #6f6f6f;
     width: 104px;
     height: 32px;
     position: relative;
@@ -104,10 +105,11 @@ a {
     width: 20px;
     height: 20px;
     border-radius: 2px;
+    color: black;
 }
 
 .halfstep {
-    color: grey;
+    color: #444;
     font-size: 13px;
     padding-top: 2px;
 }
