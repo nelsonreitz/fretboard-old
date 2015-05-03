@@ -49,8 +49,8 @@
       </div><!-- .option -->
 
       <div class="option toggle_halfsteps">
-        <label for="toggle_halfsteps">Show half-steps</label>
         <input type="checkbox" id="toggle_halfsteps">
+        <label for="toggle_halfsteps">Show half-steps</label>
       </div><!-- .option.toggle_halfsteps -->
 
     </div><!-- .options -->

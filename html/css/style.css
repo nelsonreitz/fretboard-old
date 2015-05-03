@@ -208,12 +208,12 @@ select:focus {
     outline: none;
 }
 
-.option.frets select {
-    width: 60px;
-}
-
 .option {
     display: inline-block;
+}
+
+.option.frets select {
+    width: 60px;
 }
 
 .option.tuning {
@@ -221,9 +221,17 @@ select:focus {
 }
 
 .option.toggle_halfsteps {
+    margin-top: 3px;
+}
+
+.option.toggle_halfsteps {
     float: right;
 }
 
-.options label {
+.tuning label, .frets label {
     margin-right: 5px;
+}
+
+.toggle_halfsteps label {
+    margin-left: 5px;
 }
