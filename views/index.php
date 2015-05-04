@@ -9,7 +9,6 @@
     <title>Fretboard Chart</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:700,400' rel='stylesheet' type='text/css'>
-
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
 
@@ -19,41 +18,46 @@
   </head>
   <body>
 
-    <header class="header" role="banner">
-      <h1 class="site-title"><a href="/">Fretboard Chart</a></h1>
-    </header>
 
-    <div id="fretboard">
-    </div><!-- #fretboard -->
+      <header class="header" role="banner">
+        <h1 class="site-title"><a href="/">Fretboard Chart</a></h1>
+      </header>
 
-    <div class="options">
+        <div id="fretboard">
+        </div><!-- #fretboard -->
 
-      <div class="option tuning">
-        <label for="tuning_select">Tuning:</label>
-        <select id="tuning_select">
+        <div class="options">
 
-          <?php foreach ($tunings as $tuning): ?>
-              <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
-          <?php endforeach ?>
+          <div class="option tuning">
+            <label for="tuning_select">Tuning:</label>
+            <select id="tuning_select">
 
-        </select>
-      </div><!-- .option -->
+              <?php foreach ($tunings as $tuning): ?>
+                  <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
+              <?php endforeach ?>
 
-      <div class="option frets">
-        <label for="frets_select">Frets:</label>
-        <select id="frets_select">
-          <option value="12">12</option>
-          <option value="15">15</option>
-          <option value="24">24</option>
-        </select>
-      </div><!-- .option -->
+            </select>
+          </div><!-- .option -->
 
-      <div class="option toggle_halfsteps">
-        <input type="checkbox" id="toggle_halfsteps">
-        <label for="toggle_halfsteps">Show half-steps</label>
-      </div><!-- .option.toggle_halfsteps -->
+          <div class="option frets">
+            <label for="frets_select">Frets:</label>
+            <select id="frets_select">
+              <option value="12">12</option>
+              <option value="15">15</option>
+              <option value="24">24</option>
+            </select>
+          </div><!-- .option -->
 
-    </div><!-- .options -->
+          <div class="option toggle_halfsteps">
+            <input type="checkbox" id="toggle_halfsteps">
+            <label for="toggle_halfsteps">Show half-steps</label>
+          </div><!-- .option.toggle_halfsteps -->
+
+        </div><!-- .options -->
+
+      <footer class="footer">
+        <p>&copy; 2015 Fretboardchart.com</p>
+      </footer>
 
   </body>
 </html>
