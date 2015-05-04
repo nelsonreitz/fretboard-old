@@ -260,6 +260,21 @@ select:focus {
 
 /* Medium screen */
 
+@media screen and (max-height: 660px) {
+
+    body {
+        display: block;
+    }
+
+    .options {
+        margin-bottom: 60px;
+    }
+
+    .footer {
+        position: static;
+    }
+}
+
 @media screen and (max-width: 1350px) {
 
     body {
@@ -271,3 +286,4 @@ select:focus {
         width: 100%;
     }
 }
+
