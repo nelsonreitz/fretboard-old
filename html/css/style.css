@@ -42,7 +42,7 @@ a {
     width: 100%;
     max-width: 960px;
     border-bottom: 1px solid #dfdfdf;
-    margin: 0 auto 11em auto;
+    margin: 0 auto 9em auto;
 }
 
 .site-title {
@@ -234,4 +234,17 @@ select:focus {
 
 .toggle_halfsteps label {
     margin-left: 5px;
+}
+
+/* Medium screen */
+
+@media screen and (max-width: 1350px) {
+
+    body {
+        max-width: 960px;
+    }
+
+    #fretboard {
+        width: 100%;
+    } 
 }
