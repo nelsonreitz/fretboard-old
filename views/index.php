@@ -18,46 +18,47 @@
   </head>
   <body>
 
-
-      <header class="header" role="banner">
+    <header class="header" role="banner">
         <h1 class="site-title"><a href="/">Fretboard Chart</a></h1>
-      </header>
+    </header>
 
-        <div id="fretboard">
-        </div><!-- #fretboard -->
+    <div id="fretboard">
+    </div><!-- #fretboard -->
 
-        <div class="options">
+    <div id="bottom-wrapper">
 
-          <div class="option tuning">
-            <label for="tuning_select">Tuning:</label>
-            <select id="tuning_select">
+      <div class="options">
+        <div class="option tuning">
+          <label for="tuning_select">Tuning:</label>
+          <select id="tuning_select">
 
-              <?php foreach ($tunings as $tuning): ?>
-                  <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
-              <?php endforeach ?>
+            <?php foreach ($tunings as $tuning): ?>
+                <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
+            <?php endforeach ?>
 
-            </select>
-          </div><!-- .option -->
+          </select>
+        </div><!-- .option.tuning -->
 
-          <div class="option frets">
-            <label for="frets_select">Frets:</label>
-            <select id="frets_select">
-              <option value="12">12</option>
-              <option value="15">15</option>
-              <option value="24">24</option>
-            </select>
-          </div><!-- .option -->
+        <div class="option frets">
+          <label for="frets_select">Frets:</label>
+          <select id="frets_select">
+            <option value="12">12</option>
+            <option value="15">15</option>
+            <option value="24">24</option>
+          </select>
+        </div><!-- .option.frets -->
 
-          <div class="option toggle_halfsteps">
-            <input type="checkbox" id="toggle_halfsteps">
-            <label for="toggle_halfsteps">Show half-steps</label>
-          </div><!-- .option.toggle_halfsteps -->
-
-        </div><!-- .options -->
+        <div class="option toggle_halfsteps">
+          <input type="checkbox" id="toggle_halfsteps">
+          <label for="toggle_halfsteps">Show half-steps</label>
+        </div><!-- .option.toggle_halfsteps -->
+      </div><!-- .options -->
 
       <footer class="footer">
         <p>&copy; 2015 Fretboardchart.com</p>
       </footer>
+
+    </div><!-- #bottom-wrapper -->
 
   </body>
 </html>
