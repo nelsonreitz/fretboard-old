@@ -258,7 +258,7 @@ select:focus {
     height: 50px;
 }
 
-/* Medium screen */
+/* Vertical small screen */
 
 @media screen and (max-height: 660px) {
 
@@ -275,6 +275,8 @@ select:focus {
     }
 }
 
+/* Large screen */
+
 @media screen and (max-width: 1350px) {
 
     body {
@@ -287,3 +289,11 @@ select:focus {
     }
 }
 
+/* Medium screen */
+
+@media screen and (max-width: 1066px) {
+
+    body {
+        width: 90%;
+    }
+}
