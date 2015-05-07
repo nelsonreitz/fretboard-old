@@ -55,7 +55,7 @@
       </div><!-- .options -->
 
       <footer class="footer">
-        <p>&copy; 2015 Fretboardchart.com</p>
+        <p>&copy; 2015 fretboardchart.com - Nelson Reitz - <a href="https://github.com/nelsonreitz/fretboard">Project on GitHub</a></p>
       </footer>
 
     </div><!-- #bottom-wrapper -->

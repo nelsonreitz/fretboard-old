@@ -220,13 +220,14 @@ select:focus {
 
 .option {
     display: inline-block;
+    margin-bottom: 16px;
 }
 
 .option.frets select {
     width: 60px;
 }
 
-.option.tuning {
+.option.tuning, .option.frets {
     margin-right: 20px;
 }
 
@@ -256,6 +257,11 @@ select:focus {
     bottom: 0;
     left: 0;
     height: 50px;
+}
+
+.footer a {
+    color: lightgrey;
+    font-weight: 600;
 }
 
 /* Vertical small screen */
@@ -295,5 +301,14 @@ select:focus {
 
     body {
         width: 90%;
+    }
+}
+
+/* Small screen */
+
+@media screen and (max-width: 530px) {
+
+    .option.toggle_halfsteps {
+        float: none;
     }
 }
