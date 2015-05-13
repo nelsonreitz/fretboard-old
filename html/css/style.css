@@ -223,12 +223,21 @@ select:focus {
     margin-bottom: 16px;
 }
 
-.option.frets select {
-    width: 60px;
+#frets_form {
+    display: inline-block;
+}
+
+#frets_form input {
+    margin-right: 2px;
+}
+
+#frets_form label {
+    margin-right: 16px;
+    font-size: 15px;
 }
 
 .option.tuning, .option.frets {
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 .option.toggle_halfsteps {
@@ -240,7 +249,7 @@ select:focus {
 }
 
 .tuning label, .frets label {
-    margin-right: 5px;
+    margin-right: 6px;
 }
 
 .toggle_halfsteps label {
@@ -306,7 +315,7 @@ select:focus {
 
 /* Small screen */
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 662px) {
 
     .option.toggle_halfsteps {
         float: none;

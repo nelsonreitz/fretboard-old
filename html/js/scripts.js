@@ -31,10 +31,10 @@ $(document).ready(function() {
     });
 
     // draw fretboard with selected number of frets
-    $("#frets_select").change(function() {
+    $("#frets_form").change(function() {
 
         var tuning = $("#tuning_select").val();
-        var frets = $("#frets_select").val();
+        var frets = $("input[name=frets]:checked").val();
         drawFretboard(frets, tuning);
     });
 
