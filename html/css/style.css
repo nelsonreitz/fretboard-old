@@ -50,18 +50,26 @@ a {
     max-width: 960px;
     border-bottom: 1px solid #dfdfdf;
     margin: 0 auto 9em auto;
+    padding-bottom: 15px;
 }
 
 .site-title {
-    margin: 1.5em 0 0.2em 0;
+    margin: 1.5em 0 1px 0;
     text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: grey;
+    font-weight: 400;
+    margin: 0;
 }
 
 /* Fretboard */
 
 #fretboard {
     width: 77%;
-    margin: 0 auto 4em auto;
+    margin: 0 auto 6em auto;
     text-align: center;
 }
 
@@ -280,7 +288,7 @@ select:focus {
 
 /* Vertical small screen */
 
-@media screen and (max-height: 660px) {
+@media screen and (max-height: 737px) {
 
     body {
         display: block;

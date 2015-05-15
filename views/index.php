@@ -20,6 +20,7 @@
 
     <header class="header" role="banner">
         <h1 class="site-title"><a href="/">Fretboard Chart</a></h1>
+        <h2 class="subtitle">Change this text in the future</h2>
     </header>
 
     <div id="fretboard">
