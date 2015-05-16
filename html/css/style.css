@@ -10,7 +10,11 @@
  * - General
  * - Header
  * - Fretboard
+ * - Notes
+ * - Bottom
  * - Options
+ * - Footer
+ * - Media queries
  */
 
 /* General */
@@ -108,6 +112,23 @@ a {
     height: 15px;
 }
 
+.single_inlay, .double_inlay {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: grey;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.double_inlay {
+    position: absolute;
+    top: -5px;
+    left: 25px;
+}
+
+/* Notes */
+
 .open_note {
     position: absolute;
     top: -9px;
@@ -127,27 +148,6 @@ a {
     color: #444;
     font-size: 13px;
     padding-top: 2px;
-}
-
-.single_inlay {
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    background: grey;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.double_inlay {
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    background: grey;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    top: -5px;
-    left: 25px;
 }
 
 .note.A {
