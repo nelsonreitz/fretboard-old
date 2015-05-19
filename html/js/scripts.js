@@ -1,7 +1,16 @@
+/**
+ * scripts.js
+ *
+ * Fretboard Chart
+ *
+ * Nelson Reitz
+ * http://github.com/nelsonreitz/fretboard
+ */
+
 // default tuning abbr
 var defaultTuning = "e_std";
 
-// default number of fret
+// default number of frets to display
 var defaultFrets = 12;
 
 // number of frets to change octave

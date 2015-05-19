@@ -1,5 +1,14 @@
 <?php
 
+    /**
+     * notes.php
+     *
+     * Fretboard Chart
+     *
+     * Nelson Reitz
+     * http://github.com/nelsonreitz/fretboard
+     */
+
     // configuration
     require('../models/model.php');
 

@@ -3,6 +3,8 @@
     /**
      * model.php
      *
+     * Fretboard Chart
+     *
      * Nelson Reitz
      * http://github.com/nelsonreitz/fretboard
      */
