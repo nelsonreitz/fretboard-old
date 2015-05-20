@@ -48,6 +48,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 /* Header */
 
 .header {
@@ -61,6 +65,10 @@ a {
 .site-title {
     margin: 1.5em 0 1px 0;
     text-transform: uppercase;
+}
+
+.site-title a:hover {
+    text-decoration: none;
 }
 
 .subtitle {
