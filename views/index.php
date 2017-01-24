@@ -40,18 +40,6 @@
           </select>
         </div><!-- .option.tuning -->
 
-        <div class="option frets">
-          <label for="frets_form">Frets:</label>
-          <form id="frets_form">
-            <input type="radio" name="frets" id="frets12" value="12" checked="checked"/>
-            <label for="frets12">12</label>
-            <input type="radio" name="frets" id="frets15" value="15"/>
-            <label for="frets15">15</label>
-            <input type="radio" name="frets" id="frets24" value="24"/>
-            <label for="frets24">24</label>
-          </form>
-        </div><!-- .option.frets -->
-
         <div class="option toggle_halfsteps">
           <input type="checkbox" id="toggle_halfsteps">
           <label for="toggle_halfsteps">Show half-steps</label>

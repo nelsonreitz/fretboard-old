@@ -245,20 +245,7 @@ select:focus {
     margin-bottom: 16px;
 }
 
-#frets_form {
-    display: inline-block;
-}
-
-#frets_form input {
-    margin-right: 2px;
-}
-
-#frets_form label {
-    margin-right: 16px;
-    font-size: 15px;
-}
-
-.option.tuning, .option.frets {
+.option.tuning {
     margin-right: 25px;
 }
 
@@ -270,7 +257,7 @@ select:focus {
     float: right;
 }
 
-.tuning label, .frets label {
+.tuning label {
     margin-right: 6px;
 }
 
