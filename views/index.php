@@ -26,31 +26,27 @@
     <div id="fretboard">
     </div><!-- #fretboard -->
 
-    <div id="bottom-wrapper">
+    <div class="options">
+      <div class="option tuning">
+        <label for="tuning_select">Tuning:</label>
+        <select id="tuning_select">
 
-      <div class="options">
-        <div class="option tuning">
-          <label for="tuning_select">Tuning:</label>
-          <select id="tuning_select">
+          <?php foreach ($tunings as $tuning): ?>
+              <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
+          <?php endforeach ?>
 
-            <?php foreach ($tunings as $tuning): ?>
-                <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
-            <?php endforeach ?>
+        </select>
+      </div><!-- .option.tuning -->
 
-          </select>
-        </div><!-- .option.tuning -->
+      <div class="option toggle_halfsteps">
+        <input type="checkbox" id="toggle_halfsteps">
+        <label for="toggle_halfsteps">Show half-steps</label>
+      </div><!-- .option.toggle_halfsteps -->
+    </div><!-- .options -->
 
-        <div class="option toggle_halfsteps">
-          <input type="checkbox" id="toggle_halfsteps">
-          <label for="toggle_halfsteps">Show half-steps</label>
-        </div><!-- .option.toggle_halfsteps -->
-      </div><!-- .options -->
-
-      <footer class="footer">
-        <p>&copy; 2015 fretboardchart.com - Nelson Reitz - <a href="https://github.com/nelsonreitz/fretboard">Project on GitHub</a></p>
-      </footer>
-
-    </div><!-- #bottom-wrapper -->
+    <footer class="footer">
+      <p>&copy; 2015 fretboardchart.com - Nelson Reitz - <a href="https://github.com/nelsonreitz/fretboard">Project on GitHub</a></p>
+    </footer>
 
   </body>
 </html>

@@ -207,16 +207,6 @@ a:hover {
     background-color: #ece2ff;
 }
 
-/* Bottom */
-
-#bottom-wrapper {
-    position: relative;
-    flex-grow: 1;
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
-}
-
 /* Options */
 
 .options {
