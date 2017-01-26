@@ -92,6 +92,14 @@ a:hover {
     table-layout: fixed;
 }
 
+#fretboard td#open_header {
+    width: 40px;
+}
+
+#fretboard td#gap_header {
+    width: 16px;
+}
+
 #fretboard .fretnumbers td {
     padding-bottom: 16px;
     font-size: 14px;

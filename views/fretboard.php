@@ -2,9 +2,9 @@
   <thead>
     <tr class="fretnumbers">
 
-      <td></td>
+      <td id="open_header"></td>
       <?php for ($i = 0; $i < $frets + 1; $i++): ?>
-          <td><?= ($i == 0) ? '' : $i ?></td>
+          <td <?= ($i == 0) ? 'id="gap_header">' : '>' . $i  ?></td>
       <?php endfor ?>
 
     </tr>
