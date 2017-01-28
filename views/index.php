@@ -45,7 +45,7 @@
     </div><!-- .options -->
 
     <footer class="footer">
-      <p>&copy; 2015 fretboardchart.com - Nelson Reitz - <a href="https://github.com/nelsonreitz/fretboard">Project on GitHub</a></p>
+      <p>&copy; <?= date("Y"); ?> fretboard-notes.com - Nelson Reitz - <a href="https://github.com/nelsonreitz/fretboard">View the project on GitHub</a></p>
     </footer>
 
   </body>
