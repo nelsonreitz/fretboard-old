@@ -13,9 +13,6 @@ var defaultTuning = "e_std";
 // default number of frets to display
 var defaultFrets = 12;
 
-// number of frets to change octave
-var octave = 12;
-
 // inlays positions
 var singleInlays = {
   "string": 3,
@@ -50,14 +47,6 @@ $(document).ready(function() {
 
     // give clicked attribute to default tuning
     $("#tuning_select input[name=" + defaultTuning + "]").attr("clicked", "true");
-
-    // draw fretboard with selected number of frets
-    $("#frets_form").change(function() {
-
-        var tuning = $("#tuning_select").val();
-        var frets = $("input[name=frets]:checked").val();
-        drawFretboard(frets, tuning);
-    });
 
     // toggle half-steps on checkbox change
     $("#toggle_halfsteps").change(function() {
@@ -155,9 +144,6 @@ function drawNotes(tuning) {
 
                   // draw note
                   $("." + string_number + " > .fret" + frets).append(noteHtml);
-
-                  // draw note an octave higher
-                  $("." + string_number + " > .fret" + (parseInt(frets) + octave)).append(noteHtml);
 
                   // hide half-steps by default
                   if ($("#toggle_halfsteps").prop("checked") == false) {
