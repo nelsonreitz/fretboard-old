@@ -40,8 +40,13 @@
       </div><!-- .option.tuning -->
 
       <div class="option toggle_halfsteps">
-        <input type="checkbox" id="toggle_halfsteps">
-        <label for="toggle_halfsteps">Show half-steps</label>
+
+        <label for="toggle_halfsteps">Show half steps notes</label>
+        <label class="switch">
+          <input type="checkbox" id="toggle_halfsteps">
+          <div class="slider round"></div>
+        </label>
+        
       </div><!-- .option.toggle_halfsteps -->
 
     </div><!-- .options -->
