@@ -43,11 +43,11 @@
         <input type="checkbox" id="toggle_halfsteps">
         <label for="toggle_halfsteps">Show half-steps</label>
       </div><!-- .option.toggle_halfsteps -->
-      
+
     </div><!-- .options -->
 
     <footer class="footer">
-      <p>&copy; <?= date("Y"); ?> fretboard-notes.com - Nelson Reitz - <a href="https://github.com/nelsonreitz/fretboard">View the project on GitHub</a></p>
+      <p>&copy; <?= date("Y") ?> fretboard-notes.com - Nelson Reitz - <a href="https://github.com/nelsonreitz/fretboard">View the project on GitHub</a></p>
     </footer>
 
   </body>
