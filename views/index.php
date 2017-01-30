@@ -33,7 +33,7 @@
         <form id="tuning_select">
 
           <?php foreach ($tunings as $tuning): ?>
-              <input type="submit" name="<?= $tuning['abbr'] ?>" value="<?= $tuning['name'] ?>">
+              <input class="button" type="submit" name="<?= $tuning['abbr'] ?>" value="<?= $tuning['name'] ?>">
           <?php endforeach ?>
 
         </form>
@@ -46,7 +46,7 @@
           <input type="checkbox" id="toggle_halfsteps">
           <div class="slider round"></div>
         </label>
-        
+
       </div><!-- .option.toggle_halfsteps -->
 
     </div><!-- .options -->
