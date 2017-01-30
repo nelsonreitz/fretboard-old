@@ -52,9 +52,9 @@ $(document).ready(function() {
     $("#toggle_halfsteps").change(function() {
 
         if (this.checked) {
-            $(".halfstep").show();
+            $(".halfstep").fadeIn(200);
         } else {
-            $(".halfstep").hide();
+            $(".halfstep").fadeOut(200);
         }
     });
 
