@@ -27,21 +27,23 @@
     </div><!-- #fretboard -->
 
     <div class="options">
+
       <div class="option tuning">
-        <label for="tuning_select">Tuning:</label>
-        <select id="tuning_select">
+        <label for="tuning_select">Select tuning:</label>
+        <form id="tuning_select">
 
           <?php foreach ($tunings as $tuning): ?>
-              <option value="<?= $tuning['abbr'] ?>"><?= $tuning['name'] ?></option>
+              <input type="submit" name="<?= $tuning['abbr'] ?>" value="<?= $tuning['name'] ?>">
           <?php endforeach ?>
 
-        </select>
+        </form>
       </div><!-- .option.tuning -->
 
       <div class="option toggle_halfsteps">
         <input type="checkbox" id="toggle_halfsteps">
         <label for="toggle_halfsteps">Show half-steps</label>
       </div><!-- .option.toggle_halfsteps -->
+      
     </div><!-- .options -->
 
     <footer class="footer">
