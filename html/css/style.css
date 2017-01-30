@@ -234,14 +234,15 @@ a:hover {
     padding: 32px;
 }
 
-select {
-}
-
 .option {
     display: inline-block;
 }
 
 .option.tuning {
+}
+
+.option.tuning input[clicked="true"] {
+    background-color: grey;
 }
 
 .option.toggle_halfsteps {

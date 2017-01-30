@@ -33,11 +33,23 @@ $(document).ready(function() {
     drawFretboard(defaultFrets, defaultTuning);
 
     // draw notes of selected tuning
-    $("#tuning_select").change(function() {
+    $("#tuning_select").submit(function() {
 
-        var tuning = $("#tuning_select").val();
+        var tuning = $("input[type=submit][clicked=true]").attr("name");
         drawNotes(tuning);
+
+        // prevent form submission
+        return false;
     });
+
+    // give clicked attribute to clicked inputs
+    $("#tuning_select input[type=submit]").click(function() {
+        $("input[type=submit]", $(this).parents("form")).removeAttr("clicked");
+        $(this).attr("clicked", "true");
+    });
+
+    // give clicked attribute to default tuning
+    $("#tuning_select input[name=" + defaultTuning + "]").attr("clicked", "true");
 
     // draw fretboard with selected number of frets
     $("#frets_form").change(function() {
