@@ -31,7 +31,7 @@ html {
 
 body {
     font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #0A0F14;
     color: #444444;
 }
 
@@ -52,12 +52,9 @@ a:hover {
 
 .header {
     width: 100%;
-    height: 120px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #d4d4d4;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-    margin-bottom: 64px;
-    padding: 52px 32px 16px 32px;
+    height: 100px;
+    background-color: #1F2E37;
+    padding: 32px 32px 16px 32px;
 }
 
 .site-title {
@@ -65,6 +62,11 @@ a:hover {
     margin: 0 0 4px 0;
     font-size: 32px;
     line-height: 32px;
+    letter-spacing: 0.5px;
+}
+
+.site-title a {
+    color: #fff;
 }
 
 .site-title a:hover {
@@ -73,7 +75,7 @@ a:hover {
 
 .subtitle {
     margin: 0;
-    color: #979797;
+    color: rgba(255,255,255,0.56);
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
@@ -84,11 +86,11 @@ a:hover {
 #fretboard {
     text-align: center;
     width: 100%;
-    border-bottom:1px solid #d4d4d4;
-    border-top:1px solid #d4d4d4;
-    height: 326px;
-    background-color: #ffffff;
-    padding: 32px 32px 64px 32px;
+    height: 384px;
+    background-color: #283D4A;
+    padding: 96px 32px 64px 32px;
+    border-bottom: 1px solid rgba(0,0,0,1);
+    box-shadow: 0 1px 1px 0 #000000;
 }
 
 #fretboard table {
@@ -106,13 +108,14 @@ a:hover {
 
 #fretboard .fretnumbers td {
     padding-bottom: 16px;
+    color: #fff;
     font-size: 14px;
     line-height: 16px;
 }
 
 #fretboard tbody td {
-    border-top: 1px solid #979797;
-    border-right: 1px solid #979797;
+    border-top: 1px solid rgba(255,255,255,0.41);
+    border-right: 1px solid rgba(255,255,255,0.41);
     height: 32px;
     position: relative;
 }
@@ -122,7 +125,7 @@ a:hover {
 }
 
 #fretboard .fret0 {
-    border-right: 2px solid black;
+    border-right: 2px solid #fff;
     border-left: none;
 }
 
@@ -137,17 +140,17 @@ a:hover {
 }
 
 .single_inlay, .double_inlay {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 100%;
-    background: #ececec;
+    background-color: rgba(255, 255, 255, 0.5);
     margin-left: auto;
     margin-right: auto;
 }
 
 .double_inlay {
     position: absolute;
-    top: -5px;
+    top: -4px;
     left: 25px;
 }
 
@@ -156,23 +159,26 @@ a:hover {
 .open_note {
     position: absolute;
     top: -8px;
+    color: #fff;
     font-size: 16px;
     line-height: 16px;
 }
 
 .note, .halfstep {
     position: absolute;
-    top: -11px;
-    width: 20px;
-    height: 20px;
+    top: -13px;
+    width: 24px;
+    height: 24px;
     border-radius: 2px;
     color: black;
+    padding-top: 2px;
+    box-shadow: 0 1px 2px 0 #000;
 }
 
 .halfstep {
-    color: #444;
+    color: rgba(0,0,0,0.7);
     font-size: 12px;
-    padding-top: 3px;
+    padding-top: 5px;
 }
 
 .note.A {
@@ -227,10 +233,8 @@ a:hover {
 
 .options {
     width: 100%;
-    height: 136px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #d4d4d4;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    height: 140px;
+    background-color: #1F2E37;
     padding: 32px;
 }
 
@@ -238,29 +242,32 @@ a:hover {
     display: inline-block;
 }
 
+.option label {
+    color: rgba(255,255,255,0.7);
+}
+
 .button, input.button {
-    background-color: #ffffff;
+    background-color: #5A646A;
     height: 48px;
-    border: 1px solid #b7b7b7;
+    border: none;
     border-radius: 2px;
     margin-right: 8px;
     padding: 16px;
+    color: #fff;
     font-size: 16px;
     line-height: 16px;
     float: left;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.25), 0 1px 1px 0 #000000;
 }
 
 .button:hover {
-    border-color: #444444;
+    background-color: #828E96;
 }
 
 .option.tuning input[clicked="true"] {
-    background-color: #979797;
+    background-color: #2098CD;
     box-shadow: none;
-    color: white;
-    font-weight: 700;
-    border-color: #444444;
+    box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.15);
 }
 
 .option.tuning {
@@ -274,6 +281,8 @@ a:hover {
 }
 
 .tuning label {
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
 .toggle_halfsteps label {
@@ -311,14 +320,15 @@ a:hover {
   width: 32px;
   left: -2px;
   bottom: -2px;
-  background-color: white;
-  border: 2px solid #b7b7b7;
+  background-color: #828E96;
+  box-shadow: inset 0 2px 0 0 rgba(255,255,255,0.25), 0 1px 1px 0 #000000;
+  /*border: 2px solid #b7b7b7;*/
   -webkit-transition: .2s;
   transition: .2s;
 }
 
 input:checked + .slider {
-  background-color: lightgrey;
+  background-color: #2098CD;
 }
 
 input:focus + .slider {
@@ -334,7 +344,9 @@ input:checked + .slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 32px;
-  border: 2px solid #b7b7b7;
+  background-color: #0A0F14;
+  box-shadow: inset 0 2px 0 0 rgba(0,0,0,0.9);
+  /*border: 2px solid rgba(255,255,255,0.3);*/
 
 }
 
@@ -347,11 +359,11 @@ input:checked + .slider:before {
 .footer {
     width: 100%;
     padding: 32px;
-    color: #b7b7b7;
-    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
 }
 
 .footer a {
     font-weight: 700;
-    color: #b7b7b7;
+    color: rgba(255,255,255,0.6);
 }
